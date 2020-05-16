@@ -1,3 +1,3 @@
 # portfolio-website
 
-mingwheel.github.io/portfolio-website
+https://mingwheel.github.io/portfolio-website
