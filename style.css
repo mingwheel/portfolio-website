@@ -171,8 +171,8 @@ main {
 
 .modal-content {
   position: relative;
-  width: 80%;
-  margin: 15% auto;
+  max-width: 80vw;
+  margin: 10vh auto;
 }
 
 .modal-image img {
@@ -242,5 +242,11 @@ main {
   .gallery-grid {
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 150px 400px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .modal-content {
+    max-width: 1024px;
   }
 }

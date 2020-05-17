@@ -5,8 +5,13 @@ const modalCloseBtn = document.querySelector(".modal-close");
 galleryItems.forEach((item) => {
   item.addEventListener("click", function () {
     console.log("clicked");
-    let selectedImage = item.childNodes[1].childNodes[1].src;
-    console.log(selectedImage);
+    let selectedImage = item.querySelector("img").src;
+    let selectedTitle = item.querySelector("h3").innerText;
+    console.log(selectedTitle);
+    let modalImage = modal.querySelector("img");
+    let modalTitle = modal.querySelector("h3");
+    modalImage.src = selectedImage;
+    modalTitle.innerText = selectedTitle;
     toggleModal();
   });
 });
