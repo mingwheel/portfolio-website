@@ -16,7 +16,11 @@ a:active {
 body {
   background-color: #ddd;
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+body.modal-open {
+  overflow: hidden;
 }
 
 /* General */
@@ -26,6 +30,10 @@ body {
 
 main {
   padding-top: 10vh;
+}
+/* Icons */
+.fab {
+  font-size: 1.2em;
 }
 
 /* Navbar */
@@ -50,13 +58,18 @@ main {
   flex-basis: 60%;
 }
 #nav-menu li {
-  padding: 0 2em;
+  padding: 0 1em;
 }
 
 .nav-social {
   margin: 0;
   display: flex;
   list-style: none;
+}
+
+.nav-social li {
+  cursor: pointer;
+  margin-left: 20px;
 }
 
 .navbar-left {
@@ -130,7 +143,7 @@ main {
   color: #eee;
   pointer-events: none;
   transition: 0.3s ease-in-out;
-  backdrop-filter: blur(10px) saturation(2);
+  text-shadow: 1px 1px 3px #333;
 }
 
 .gallery-item:hover h3 {
@@ -170,6 +183,7 @@ main {
 }
 
 .modal-content {
+  background-color: #eee;
   position: relative;
   max-width: 80vw;
   margin: 10vh auto;
@@ -178,13 +192,43 @@ main {
 .modal-image img {
   display: block;
   width: 100%;
+  height: 50vh;
   object-fit: cover;
 }
 
 .modal-text {
-  padding: 2em;
-  color: #fff;
+  height: 25vh;
+  margin-top: 1rem;
+  padding: 0 2rem 2rem;
+  color: #333;
+  overflow-y: scroll;
+}
+
+.modal-title {
+  padding: 2rem 0 0 2rem;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.modal-text::-webkit-scrollbar {
+  width: .5em;
+  background-color: #f5f5f5;
+}
+.modal-text::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+.modal-text::-webkit-scrollbar-thumb {
+  cursor: pointer;
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #999;
+}
+.modal-text::-webkit-scrollbar-thumb:hover {
   background-color: #333;
+}
+
 }
 
 .modal-text h3 {
@@ -236,6 +280,10 @@ main {
   .wide {
     grid-column: span 1;
     grid-row: span 1;
+  }
+
+  .navbar .nav-social {
+    display: none;
   }
 }
 @media only screen and (min-width: 501px) and (max-width: 1000px) {
