@@ -4,6 +4,8 @@ const modal = document.querySelector(".modal");
 const modalCloseBtn = document.querySelector(".modal-close");
 const modalImage = modal.querySelector("img");
 const modalTitle = modal.querySelector(".modal-title");
+const navbar = document.querySelectorAll("#nav-menu li");
+const sections = document.querySelectorAll("main section");
 
 /* Preload Images */
 var images = [];
@@ -68,6 +70,19 @@ document.addEventListener("keydown", function (evt) {
   }
 });
 
+/* Navbar selection */
+navbar.forEach((section) => {
+  section.addEventListener("click", function () {
+    let selected = this.innerText;
+    sections.forEach((section) => {
+      if (selected === section.id) {
+        section.classList.remove("hide");
+      } else {
+        section.classList.add("hide");
+      }
+    });
+  });
+});
 /* Grid Items Scroll Animations */
 window.addEventListener("scroll", function () {
   scrollPosition = window.pageYOffset + window.innerHeight;
