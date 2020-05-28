@@ -1,7 +1,7 @@
 const body = document.querySelector("body");
 const galleryItems = document.querySelectorAll(".gallery-item");
 const modal = document.querySelector(".modal");
-const modalCloseBtn = document.querySelector(".modal-close");
+const modalCloseBtn = document.querySelector(".modal-close-btn");
 const modalImage = modal.querySelector("img");
 const modalTitle = modal.querySelector(".modal-title");
 const navbar = document.querySelectorAll("#nav-menu li");
@@ -70,19 +70,42 @@ document.addEventListener("keydown", function (evt) {
   }
 });
 
-/* Navbar selection */
-navbar.forEach((section) => {
-  section.addEventListener("click", function () {
-    let selected = this.innerText;
+/* Navbar  */
+navbar.forEach((navlink) => {
+  navlink.addEventListener("click", function () {
+    let activeSection = document.querySelector("section.active");
+    let selectedSection = this.innerText;
     sections.forEach((section) => {
-      if (selected === section.id) {
-        section.classList.remove("hide");
-      } else {
-        section.classList.add("hide");
+      if (
+        selectedSection !== activeSection.id &&
+        selectedSection === section.id
+      ) {
+        hideSectionAnim(activeSection);
+        showSectionAnim(section);
+        setTimeout(function () {
+          section.style.opacity = 1;
+        }, 600);
       }
     });
   });
 });
+
+function showSectionAnim(section) {
+  section.style.opacity = 0;
+  section.classList.add("active");
+  setTimeout(function () {
+    section.classList.remove("hide");
+  }, 500);
+}
+
+function hideSectionAnim(section) {
+  section.style.opacity = 0; // fade out over 500ms
+  section.classList.remove("active");
+  setTimeout(function () {
+    section.classList.add("hide");
+  }, 500); // hide after 500ms fade
+}
+
 /* Grid Items Scroll Animations */
 window.addEventListener("scroll", function () {
   scrollPosition = window.pageYOffset + window.innerHeight;
