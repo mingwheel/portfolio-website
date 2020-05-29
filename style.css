@@ -245,32 +245,32 @@ section.hide {
 }
 
 .modal-content {
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
+
   background-color: var(--main-bg-color);
   position: relative;
   max-width: 80vw;
-  margin: 5vh auto;
+  margin: 10vh auto;
 }
 
 .modal-image img {
   display: block;
   width: 100%;
-  height: 65vh;
+  height: 60vh;
   object-fit: cover;
 }
 
 .modal-text {
-  height: 15vh;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  height: 20vh;
   margin-top: 1rem;
   padding: 0 2rem 2rem;
   color: var(--main-text-color);
-  overflow-y: scroll;
 }
 
 .modal-title {
   color: var(--main-theme-color);
-  padding: 2rem 0 0 2rem;
+  padding-top: 1rem;
   font-size: 1.5em;
   font-weight: 700;
 }
