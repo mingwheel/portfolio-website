@@ -4,8 +4,10 @@ const modal = document.querySelector(".modal");
 const modalCloseBtn = document.querySelector(".modal-close-btn");
 const modalImage = modal.querySelector("img");
 const modalTitle = modal.querySelector(".modal-title");
-const navbar = document.querySelectorAll("#nav-menu li");
+const navbar = document.querySelector("#nav-menu");
+const navlinks = navbar.querySelectorAll("li");
 const sections = document.querySelectorAll("main section");
+const hamburger = document.querySelector(".hamburger-menu-wrapper .toggle");
 
 /* Preload Images */
 var images = [];
@@ -71,7 +73,7 @@ document.addEventListener("keydown", function (evt) {
 });
 
 /* Navbar  */
-navbar.forEach((navlink) => {
+navlinks.forEach((navlink) => {
   navlink.addEventListener("click", function () {
     let activeSection = document.querySelector("section.active");
     let selectedSection = this.innerText;
