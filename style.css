@@ -29,10 +29,9 @@ body {
   font-family: "Source Sans Pro", sans-serif;
 }
 
-body.modal-open {
+/* body.modal-open {
   overflow: hidden;
-  position: fixed;
-}
+} */
 
 /* General */
 .container {
@@ -40,8 +39,8 @@ body.modal-open {
 }
 
 main {
-  margin-top: 6vh;
-  margin-bottom: 9vh;
+  margin-top: 3rem;
+  margin-bottom: 6rem;
 }
 
 section {
@@ -228,7 +227,6 @@ section.hide {
 /* Modal */
 
 .modal {
-
   display: none;
   position: fixed;
   width: 100%;
@@ -245,7 +243,6 @@ section.hide {
 }
 
 .modal-content {
-
   background-color: var(--main-bg-color);
   position: relative;
   max-width: 80vw;
@@ -263,8 +260,7 @@ section.hide {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
   height: 20vh;
-  margin-top: 1rem;
-  padding: 0 2rem 2rem;
+  padding: 1rem 0 2rem 2rem;
   color: var(--main-text-color);
 }
 
@@ -382,7 +378,7 @@ section.hide {
   }
 
   /* Modal */
-  .modal-image img{
+  .modal-image img {
     height: 50vh;
   }
 

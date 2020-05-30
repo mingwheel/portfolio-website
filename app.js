@@ -9,11 +9,17 @@ const navlinks = navbar.querySelectorAll("li");
 const sections = document.querySelectorAll("main section");
 const hamburger = document.querySelector(".hamburger-menu-wrapper .toggle");
 
+// Scroll lock on body when modal is open
+const bodyScrollLock = require("body-scroll-lock");
+const disableBodyScroll = bodyScrollLock.disableBodyScroll;
+const enableBodyScroll = bodyScrollLock.enableBodyScroll;
+
 /* Preload Images */
 var images = [];
 function preload() {
   for (i = 0; i < preload.arguments.length; i++) {
-    images[i] = new Image().src = preload.arguments[i];
+    images[i] = new Image();
+    images[i].src = preload.arguments[i];
   }
 }
 
@@ -64,6 +70,11 @@ window.addEventListener("click", (event) => {
 function toggleModal() {
   modal.classList.toggle("show");
   body.classList.toggle("modal-open");
+  if (modal.classList.contains("show")) {
+    disableBodyScroll();
+  } else {
+    enableBodyScroll();
+  }
 }
 
 document.addEventListener("keydown", function (evt) {
