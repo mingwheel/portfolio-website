@@ -2,7 +2,7 @@
   "name": "Ming Lun's Portfolio",
   "short_name": "PWA",
   "lang": "en-US",
-  "start_url": "https://www.mingwheel.github.io/pwa",
+  "start_url": ".",
   "display": "standalone",
   "background_color": "white",
   "theme_color": "white",
