@@ -1,6 +1,19 @@
 {
-  "name": "ML PWA",
-  "version": "0.1.0",
-  "private": true,
-  "homepage": "https://mingwheel.github.io/pwa"
+  "name": "portfolio-website",
+  "version": "1.0.0",
+  "description": "Capstone Project for Smartcademy's PWA 7-day course. https://mingwheel.github.io/pwa",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mingwheel/pwa.git"
+  },
+  "author": "Soh Ming Lun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mingwheel/pwa/issues"
+  },
+  "homepage": "https://github.com/mingwheel/pwa"
 }
