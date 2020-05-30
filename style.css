@@ -63,6 +63,13 @@ section.hide {
   color: var(--main-theme-color);
 }
 
+/* PWA Update Notification */
+#notification {
+  display: none;
+}
+#notification.show {
+  display: block;
+}
 /* Navbar */
 
 .navbar {

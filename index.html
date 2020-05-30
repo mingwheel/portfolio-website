@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Gallery</title>
     <link
       rel="stylesheet"
       href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
@@ -14,10 +15,13 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-
-    <title>Portfolio Gallery</title>
+    <link rel="manifest" href="/manifest.json" />
   </head>
   <body>
+    <div id="notification">
+      A new version of this app is available. Click <a id="reload">here</a> to
+      update.
+    </div>
     <header id="top">
       <nav class="navbar">
         <div class="container">
@@ -350,13 +354,14 @@
           <div class="about-container">
             <img src="images/profile_photo.JPG" alt="" class="about-photo" />
             <h3 class="about-text">
-              <span class="text-strong">Designer, Artist & Coder.</span class="strong">
-              <br><br>
-              Hi there! I'm <span class="text-bold">Ming Lun</span>, an architecture student from Singapore. Currently taking my 
-              master's degree in National University of Singapore 
-              <br><br>
-              I enjoy coding, drawing pixel art & playing video-games.
-              You might also find me tinkering with mechanical keyboards in my free time :)
+              <span class="text-strong">Designer, Artist & Coder.</span>
+              <br /><br />
+              Hi there! I'm <span class="text-bold">Ming Lun</span>, an
+              architecture student from Singapore. Currently taking my master's
+              degree in National University of Singapore <br /><br />
+              I enjoy coding, drawing pixel art & playing video-games. You might
+              also find me tinkering with mechanical keyboards in my free time
+              :)
             </h3>
           </div>
         </section>
@@ -424,5 +429,6 @@
     </footer>
 
     <script src="app.js"></script>
+    <script src="registerServiceWorker.js"></script>
   </body>
 </html>
