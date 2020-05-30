@@ -29,9 +29,9 @@ body {
   font-family: "Source Sans Pro", sans-serif;
 }
 
-/* body.modal-open {
+body.modal-open {
   overflow: hidden;
-} */
+}
 
 /* General */
 .container {
@@ -221,8 +221,6 @@ section.hide {
 .wide {
   grid-column: span 3;
 }
-
-/* Dev Projects */
 
 /* Modal */
 
