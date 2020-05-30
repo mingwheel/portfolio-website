@@ -13,7 +13,7 @@
       "type": "image/png"
     },
     {
-      "src": "new_icons/logo-512.png",
+      "src": "icons/logo-512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
